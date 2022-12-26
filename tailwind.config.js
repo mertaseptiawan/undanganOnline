@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./Components/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/*.{html,js}"],
   theme: {
     extend: {
       fontFamily: {
@@ -9,6 +9,10 @@ module.exports = {
 
       colors: {
         countdown: '#DCDCDC',
+      },
+
+      backgroundImage: {
+        'hero': "url('./src/assets/decoration/hand_painted_neutrol_toned_watercolour_design_2706 1.jpg')",
       }
     },
   },
