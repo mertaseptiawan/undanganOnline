@@ -62,9 +62,21 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
 });
+
+  //popup when scroll
+const popups = document.querySelectorAll('.popup')
+window.addEventListener('scoll', popup)
+  popup()
+
+  function popup() {
+    const trigger = document.
+    popups.forEach(target => {
+      const targetTop = target.getBoundingClientRect().top
+      if(targetTop < trigger) {
+        target.classList.remove('translate-y-full')
+      } else {
+        target.classList.add('translate-y-full')
+      }
+    });
+  }
