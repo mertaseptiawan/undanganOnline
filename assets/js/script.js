@@ -15,6 +15,17 @@
 
 // });
 
+  //cover
+$('#btn-open').click(function() {
+  $('#cover').css({
+    'visibility': 'hidden'
+  })
+  $('#body').removeClass('overflow-hidden')
+  $('#nav').removeClass('hidden')
+  $('#nav').addClass('flex')
+  $('#banner').removeClass('opacity-20')
+  $('#banner').removeClass('blur-sm')
+})
 
   //countdown
 const countdown = new Date("September 13, 2023 17:00:00").getTime();
@@ -64,19 +75,12 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-  //popup when scroll
-const popups = document.querySelectorAll('.popup')
-window.addEventListener('scoll', popup)
-  popup()
 
-  function popup() {
-    const trigger = document.
-    popups.forEach(target => {
-      const targetTop = target.getBoundingClientRect().top
-      if(targetTop < trigger) {
-        target.classList.remove('translate-y-full')
-      } else {
-        target.classList.add('translate-y-full')
-      }
-    });
-  }
+  //query url
+console.log("Window Location: ", window.location);
+
+const myKeyValue = window.location.search;
+const urlParams = new URLSearchParams(myKeyValue);
+const param = urlParams.get('to');
+
+document.getElementById("inviteName").innerHTML = param;

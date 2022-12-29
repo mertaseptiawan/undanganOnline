@@ -13,36 +13,46 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="w-full fixed z-50 bottom-5">
-    <nav class="navbar mx-auto h-auto w-4/5 bg-[#FCF6F0] flex justify-center rounded-xl shadow-sm">
+<body id="body" class="overflow-hidden">
+  <div id="cover" class="rounded-2xl w-4/5 h-4/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black fixed z-50">
+    <img class="rounded-2xl object-cover w-full h-full opacity-70" src="assets/image/banner.jpg" alt="">
+    <div class="absolute top-1/2 -translate-y-1/2 text-center w-full text-white">
+      <h1 class="text-5xl lg:text-9xl font-dancing">Rand & Mega</h1>
+      <p class="mt-5">Kpd Bpk/Ibu/Saudara/i</p>
+      <p id="inviteName" class="mt-3 font-dancing text-4xl"> - </p>
+      <p class="mt-4 italic text-sm font-light">tanpa Mengurangi Rasa Hormat, Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
+      <button id="btn-open" class="bg-pink-400 p-2 mt-3 rounded-xl">Buka Undangan</button>
+    </div>
+  </div>
+  <div class="w-full fixed z-40 bottom-5">
+    <nav id="nav" class="hidden navbar mx-auto h-auto w-4/5 bg-[#FCF6F0] justify-center rounded-xl shadow-sm">
       <ul class="navbar-ul flex gap-3 md:!gap-10 text-l text-[#FF9898] font-bold text-center">
           <li><a class="hover:text-pink-400" href="#">
             <img class="mx-auto h-6 md:h-9" src="assets/decoration/home.svg" loading="lazy" alt="">
-            <p class="text-[0.7rem] md:text-base">Home</p>
+            <p class="text-[0.6rem] md:text-base">Home</p>
           </a></li>
           <li><a class="hover:text-pink-400" href="#couple-profile">
             <img class="mx-auto h-6 md:h-9" src="assets/decoration/love.svg" loading="lazy" alt="">
-            <p class="text-[0.7rem] md:text-base">Couple</p>
+            <p class="text-[0.6rem] md:text-base">Couple</p>
           </a></li>
           <li><a class="hover:text-pink-400" href="#reception">
             <img class="mx-auto h-6 md:h-9" src="assets/decoration/calendar2.svg" loading="lazy" alt="">
-            <p class="text-[0.7rem] md:text-base">Reception</p>
+            <p class="text-[0.6rem] md:text-base">Reception</p>
           </a></li>
           <li><a class="hover:text-pink-400" href="#gallery">
             <img class="mx-auto h-6 md:h-9" src="assets/decoration/image.svg" loading="lazy" alt="">
-            <p class="text-[0.7rem] md:text-base">Gallery</p>
+            <p class="text-[0.6rem] md:text-base">Gallery</p>
           </a></li>
           <li><a class="hover:text-pink-400" href="#gift">
             <img class="mx-auto h-6 md:h-9" src="assets/decoration/gift.svg" loading="lazy" alt="">
-            <p class="text-[0.7rem] md:text-base">Gift</p>
+            <p class="text-[0.6rem] md:text-base">Gift</p>
           </a></li>
         </ul>
     </nav>
   </div>
-  <section>
-    <div class="h-screen relative">
-      <img class="object-cover w-full h-full" src="assets/image/banner.jpg" alt="wedding photo shoot" loading="lazy">
+  <section class=bg-black>
+    <div id="banner" class="h-screen relative opacity-20 blur-sm">
+      <img class=" object-cover w-full h-full" src="assets/image/banner.jpg" alt="wedding photo shoot" loading="lazy">
       <div class="text-center absolute top-[40%] w-full text-white">
         <h6 class="text-lg lg:text-3xl font-semibold mb-7">The Wedding Of</h6>
         <h1 class="text-6xl lg:text-9xl mb-2 font-dancing">Rand & Mega</h1>
@@ -54,7 +64,7 @@
   <main class="bg-repeat top-0" style="background-image: url('assets/decoration/hand_painted_neutrol_toned_watercolour_design_2706\ 1.jpg')">
     <div class="top-0 w-full">
       <section id="couple-profile" class="text-center pt-20">
-        <h1 class="font-dancing text-3xl md:text-5xl ">Couple Profile</h1>
+        <h1 class="font-dancing text-3xl md:text-5xl">Couple Profile</h1>
         <div class="flex flex-col lg:flex-row mt-20 gap-16 xl:gap-24 justify-center">
           <div>
             <h1 class="text-2xl md:text-3xl">Groom</h1>
