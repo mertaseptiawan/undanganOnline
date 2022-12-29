@@ -84,3 +84,39 @@ const urlParams = new URLSearchParams(myKeyValue);
 const param = urlParams.get('to');
 
 document.getElementById("inviteName").innerHTML = param;
+
+window.addEventListener("scroll", onscroll);
+
+  //when scroll effect
+function onscroll() {
+  let elements = document.querySelectorAll(".swipe");
+  for (let i = 0; i < elements.length; i++) {
+    let heights = window.innerHeight;
+    let distances = elements[i].getBoundingClientRect().top;
+    let scrollSize = -30;
+    
+    if (distances < heights - scrollSize) {
+      elements[i].classList.remove("translate-y-40")
+    } else {
+      elements[i].classList.add("translate-y-40")
+    }
+  }
+}
+
+window.addEventListener("scroll", popup);
+
+  //when scroll effect
+function popup() {
+  let elements = document.querySelectorAll(".popup");
+  for (let i = 0; i < elements.length; i++) {
+    let heights = window.innerHeight;
+    let distances = elements[i].getBoundingClientRect().top;
+    let scrollSize = 50;
+    
+    if (distances < heights - scrollSize) {
+      elements[i].classList.remove("scale-50")
+    } else {
+      elements[i].classList.add("scale-50")
+    }
+  }
+}
