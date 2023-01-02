@@ -19,12 +19,16 @@
 $('#btn-open').click(function() {
   $('#cover').css({
     'visibility': 'hidden'
-  })
-  $('#body').removeClass('overflow-hidden')
-  $('#nav').removeClass('hidden')
-  $('#nav').addClass('flex')
-  $('#banner').removeClass('opacity-20')
-  $('#banner').removeClass('blur-sm')
+  });
+  $('#body').removeClass('overflow-hidden');
+  $('#nav').removeClass('hidden');
+  $('#nav').addClass('flex');
+  $('#banner').removeClass('opacity-20');
+  $('#banner').removeClass('blur-sm');
+  $('#music').removeClass('hidden');
+  // document.getElementById("audio").autoplay = true;
+  document.getElementById("audio").play();
+  document.getElementById("playPauseBtn").setAttribute('data-play', 'true');
 })
 
   //countdown
@@ -118,5 +122,26 @@ function popup() {
     } else {
       elements[i].classList.add("scale-50")
     }
+  }
+};
+
+  //play music
+const myAudio = document.getElementById("audio");
+const btn = document.getElementById("playPauseBtn");
+const btnPlay = document.getElementById("buttonPlay");
+const btnMuted = document.getElementById("buttonMuted");
+
+const playPause = () => {
+  const dataPlay = btn.getAttribute('data-play');
+  if (dataPlay === 'false')  {
+    btn.setAttribute('data-play', 'true');
+    myAudio.play();
+    btnMuted.classList.add("hidden");
+    btnPlay.classList.remove("hidden");
+  } else {
+    btn.setAttribute('data-play', 'false');
+    myAudio.pause();
+    btnMuted.classList.remove("hidden");
+    btnPlay.classList.add("hidden");
   }
 }
