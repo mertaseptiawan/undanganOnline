@@ -145,3 +145,24 @@ const playPause = () => {
     btnPlay.classList.add("hidden");
   }
 }
+
+  //nav
+function homeNav() {
+  $(window).scrollTop($('#body').position().top);
+}
+
+function coupleNav() {
+  $(window).scrollTop($('#couple-profile').position().top);
+}
+
+function receptionNav() {
+  $(window).scrollTop($('#reception').position().top);
+}
+
+function galleryNav() {
+  $(window).scrollTop($('#gallery').position().top);
+}
+
+function giftNav() {
+  $(window).scrollTop($('#gift').position().top);
+}
